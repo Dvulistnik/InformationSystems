@@ -100,11 +100,11 @@ public class MyData {
         }
     }
     
-    public void SimplexMaximizationMethod() {
+    public boolean SimplexMaximizationMethod() {
         double minValue = Collections.min(targetFunctionVars);
         if (minValue >= 0) {
             System.out.println("");
-            return;
+            return false;
         }
         int colIndex = targetFunctionVars.indexOf(minValue);
         
@@ -137,5 +137,7 @@ public class MyData {
         }
         
         X.set(rowIndex, colIndex+1);
+        
+        return true;
     }
 }

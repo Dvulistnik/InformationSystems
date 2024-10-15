@@ -150,50 +150,10 @@ public class MainForm extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         MyData data = new MyData(jPanel1, jPanel2);
         
-        for (ArrayList<Double> row : data.rows) {
-            for (double i : row) {
-                System.out.print(i + " ");
-            }
-            System.out.println();
+        int count = 0;
+        while (data.SimplexMaximizationMethod()) {
+            count++;
         }
-        for (Double i : data.targetFunctionVars) {
-                System.out.print(i + " ");
-        }
-        System.out.println();
-        
-        data.SimplexMaximizationMethod();
-        System.out.println();
-        
-        for (ArrayList<Double> row : data.rows) {
-            for (Double i : row) {
-                System.out.print(i + " ");
-            }
-            System.out.println();
-        }
-        for (Double i : data.targetFunctionVars) {
-                System.out.print(i + " ");
-        }
-        System.out.println();
-        
-        data.SimplexMaximizationMethod();
-        System.out.println();
-        
-        for (ArrayList<Double> row : data.rows) {
-            for (Double i : row) {
-                System.out.print(i + " ");
-            }
-            System.out.println();
-        }
-        for (Double i : data.targetFunctionVars) {
-                System.out.print(i + " ");
-        }
-        
-        for (int i : data.X) {
-            System.out.println(i);
-        }
-        
-        data.SimplexMaximizationMethod();
-        System.out.println();
         
         for (ArrayList<Double> row : data.rows) {
             for (Double i : row) {
